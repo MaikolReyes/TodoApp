@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { AddTodo } from "./components/AddTodo"
 import { TodoList } from "./components/TodoList"
 import { useTodos } from "./CustomHooks/useTodos"
@@ -9,7 +8,9 @@ export const TodoApp = () => {
 
     return (
         <>
-            <h1>TodoApp:{todosCount} <small>Pendientes:{pendingTodos}</small></h1>
+            <div className="textPrincipal">
+                <h1>TodoApp: {todosCount} <span>Pendientes: {pendingTodos}</span></h1>
+            </div>
             <hr />
             <div className="row">
                 <div className="col-7">
