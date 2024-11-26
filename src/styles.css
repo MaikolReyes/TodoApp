@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.textPrincipal {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.containerTodo {
+  widht: 50%;
+}

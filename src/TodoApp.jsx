@@ -7,21 +7,27 @@ export const TodoApp = () => {
     const { todos, todosCount, pendingTodos, handleDeleteTodo, handleNewTodo, handleToggleTodo } = useTodos();
 
     return (
-        <>
+        <div className="PagePrincipal">
             <div className="textPrincipal">
-                <h1>TodoApp: {todosCount} <span>Pendientes: {pendingTodos}</span></h1>
+                <h1>Todo List App: {todosCount}</h1>
+                <span>Tareas pendientes: {pendingTodos}</span>
             </div>
             <hr />
-            <div className="row">
-                <div className="col-7">
+
+
+            <div className="containerTodo">
+
+                <div className="containerTodo">
                     <TodoList todos={todos} onDeleteTodo={handleDeleteTodo} onToggleTodo={handleToggleTodo} />
                 </div>
-                <div className="col-5">
-                    <h4>Agregar Todo</h4>
+
+
+                <div className="text-center">
+                    <h4>Agregar Tarea</h4>
                     <hr />
                     <AddTodo onNewTodo={handleNewTodo} />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
